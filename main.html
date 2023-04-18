@@ -1,0 +1,685 @@
+<!doctype html>
+<html> 
+ <head> 
+  <title>www.nash.com/shop</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,800&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"> 
+ <style type="text/css" id="dcoder_stylesheet">*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root{
+  --main-color: #ff702a;
+  --text-color: #fff;
+  --bg-color: #1e1c2a;
+  --big-font: 5rem;
+  --h2-font: 2.25rem;
+  --p-font: 0.9rem;
+}
+
+*::selection{
+  background: var(--main-color);
+  color: #fff;
+}
+
+body{
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 170px;
+  background: #2b2640;
+}
+
+.logo{
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.navbar{
+  display: flex;
+}
+
+.navbar a{
+  color: var(--text-color);
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.navbar a:hover{
+  color: var(--main-color);
+  transition: .4s;
+}
+
+#menu-icon{
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+section{
+  padding: 70px 17%;
+  margin-left: 1rem;
+}
+
+.home{
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+}
+
+.home-img img{
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+}
+
+.home-text h1{
+  font-size: var(--big-font);
+  color: var(--main-color);
+}
+
+.home-text h2{
+  font-size: var(--h2-font);
+  margin: 1rem 0 2rem;
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.btn:hover{
+  background: var(--text-color);
+  color: var(--main-color);
+  transform: scale(1.2) translateY(10px);
+  transition: .4s;
+}
+
+.about{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+}
+
+.about-img img{
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.about-text span{
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.about-text h2{
+  font-size: var(--h2-font);
+}
+
+.about-text 0{
+  margin: 0.8rem 0 1.8rem;
+  line-height: 1.7rem;
+}
+
+.heading{
+  text-align: center;
+}
+
+.heading span{
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.heading h2{
+  font-size: var(--h2-font);
+}
+
+.account-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-gap: 0.5rem;
+  align-items: center;
+}
+
+.box{
+  position: relative;
+  margin-top: 2rem;
+  grid-gap: 0.1rem;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #feeee7;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+.box-img img{
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.box h2{
+  font-size: 1.3rem;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.box p{
+  color: var(--main-color);
+  font-size: var(--p-font);
+  text-align: center;
+  font-weight: 600;
+}
+
+.box h3{
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 4px 0 10px;
+  text-align: center;
+}
+
+.box span{
+  font-size: var(--p-font);
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.box .bx{
+  background: var(--main-color);
+  color: var(--text-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  padding: 7px 10px;
+  border-radius: 0 0.5rem 0 0.5rem;
+}
+
+.service-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-gap: 0.5rem;
+  
+}
+
+.s-box{
+  text-align: center;
+  padding: 20px 30px;
+}
+
+.s-box .icon-box{
+  font-size: 30px;
+  text-align: center;
+  color: green;
+}
+
+.s-box .icon-box .gear{
+  font-size: 30px;
+  text-align: center;
+  color: green;
+}
+
+.s-box h3{
+  margin: 4px 0 10px;
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+.s-box p{
+  line-height: 1.7;
+}
+
+.cta{
+  background: #feeee7;
+  padding: 70px 0;
+  text-align: center;
+  width: 66%;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+
+.cta h2{
+  font-size: 2rem;
+  color: var(--bg-color);
+  align-button: 30px;
+}
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer{
+  padding: 10px 0;
+}
+
+.col{
+  width: 25%;
+}
+
+.col h4{
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.col h4::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  left: 0;
+  bottom: -8px;
+  background: var(--main-color);
+}
+
+.col ul li:not(last-child){
+  margin-bottom: 15px;
+}
+
+.col ul li a{
+  color: #9897a9;
+  font-size: 1.1rem;
+  display: block;
+  text-transform: capitalize;
+  transition: .4s;
+}
+
+.col ul li a:hover{
+  color: var(--text-color);
+  transform: translateX(-12px);
+}
+
+.col .social{
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col .social a{
+  width: 40px;
+  height: 40px;
+  background: var(--main-color);
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fon-size: 1.5rem;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.col .social a:hover{
+  transform: scale(1.2);
+  color: var(--bg-color);
+  background: var(--text-color);
+}
+
+.profile{
+  width: 250px;
+  height: 100px;
+  align-items: center;
+  display: flex;
+}
+
+.rent-img{
+  width: 200px;
+  height: 100px;
+}
+
+.box:hover{
+  transform: translateY(-10px);
+  transition: .4s;
+  background: yellow;
+}
+
+
+@media (max-width: 1560px){
+  header{
+    padding: 15px 40px;
+  }
+  :root{
+    --big-font: 3.5rem;
+    --h2-font: 2rem;
+  }
+}
+
+@media (max-width: 1140px){
+  section{
+    padding: 50px 8%;
+  }
+  #menu-icon{
+    display: initial;
+    color: var(--text-color);
+  }
+  header .navbar{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #2b2640;
+    transition: .3s;
+  }
+  header .navbar.active{
+    top: 50px;
+  }
+  .navbar a{
+    padding: 1.5rem;
+    display: block;
+  }
+  .col{
+    width: 50%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 720px){
+  header{
+    padding: 10px 16px;
+  }
+  .home{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-img{
+    order: 2;
+  }
+  section{
+    padding: 100px 7%;
+  }
+  .box{
+    width: 100%;
+  }
+  .col{
+    width: 100%;
+  }
+}</style></head> 
+ <body> 
+  <header> <a href="#" class="logo">Nash.com</a> 
+   <div class="bx bx-menu" id="menu-icon"></div> 
+   <ul class="navbar"> 
+    <li><a href="#home">Home</a></li> 
+    <li><a href="#about">About</a></li> 
+    <li><a href="#accounts">Accounts</a></li> 
+    <li><a href="#acc">Renting</a></li> 
+    <li><a href="#contact">Contacts</a></li> 
+   </ul> 
+  </header> <!--home---> 
+  <section class="home" id="home"> 
+   <div class="home-text"> 
+    <h1>Nash.com</h1> 
+    <h2>Free<br>Mobile Legends Accounts!</h2> 
+   </div> 
+   <div class="home-img"> 
+    <img src="https://www.freepnglogos.com/uploads/logo-mobile-legend-png/logo-mobile-legend-waktu-yang-tepat-bermain-mobile-legend-14.png"> 
+   </div> <a href="#accounts" class="btn">Free Accounts!</a> <a href="#acc" class="btn">Rent Account</a> 
+  </section> <!--about---> 
+  <section class="about" id="about"> 
+   <div class="about-img"> 
+    <img src="https://i.ibb.co/6tG3nf9/giphy-s.gif"> 
+   </div> 
+   <div class="about-text"> <span>About nash.com</span> 
+    <h2>Nash.com is<br></h2> 
+    <p>is a website that gives you a free Mobile Legends account and also helps you rent any account you want.</p> 
+   </div> 
+  </section> <!--Accounts---> 
+  <section class="accounts" id="accounts"> 
+   <div class="heading"> <span>Accounts</span> 
+    <h2>Make sure that capitalizations are right!</h2> 
+   </div> 
+   <div class="account-container"> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 1</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 2</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 3</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 4</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 5</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 6</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 7</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 8</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 9</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 10</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 11</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div> 
+     <div class="box"> 
+      <h2>Account 12</h2> 
+      <h3>Username: User123 <br> Password: Pass123 <br> Account Id: 123456789<br> Account Level: 100</h3> 
+      <p>Login Via Moonton Account</p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!--Rents---> 
+  <section class="rent" id="rent"> 
+   <div class="heading"> <span>Rent an account</span> 
+    <h2>How it works?</h2> 
+   </div> 
+   <div class="service-container"> 
+    <div class="s-box"> 
+     <div class="icon-box"> <i class="fa-solid fa-arrow-right fa-shake"></i> <i class="fa-solid fa-user-large fa-bounce"></i> <i class="fa-solid fa-arrow-left fa-shake"></i> 
+     </div> 
+     <h3>Choose an account</h3> 
+     <p>Choose an account depending on the skins, effects, or rank you want</p> 
+    </div> 
+    <div class="s-box"> 
+     <div class="icon-box"> 
+      <div class="gear"> <i class="fa-solid fa-gears fa-flip"></i> 
+      </div> 
+     </div> 
+     <h3>Process</h3> 
+     <p>We prefer to use a midman/midwomen for a safer transaction via messenger, facebook, or your preferred social media platform</p> 
+    </div> 
+    <div class="s-box"> 
+     <div class="icon-box"> <i class="fa-solid fa-face-laugh-beam fa-bounce"></i> 
+     </div> 
+     <h3>Enjoy</h3> 
+     <p>Login your chosen account and enjoy playing but don't forget the time limit</p> 
+    </div> 
+   </div> 
+  </section> <!--accounts for rent---> 
+  <section class="acc" id="acc"> 
+   <div class="heading"> <span>Accounts for rent</span> 
+    <h2>Click the post link to view full details of the account</h2> 
+   </div> 
+   <div class="account-container"> 
+    <div class="box"> 
+     <div> 
+      <h2>For Rent</h2> 
+      <img src="https://i.ibb.co/kSjGMQz/orca-image-232811880.jpg" class="rent-img"> 
+      <p>Owner: <a href="">Nash Ikagami</a></p> 
+      <p>Post link: <a href="">samplelink</a></p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div class="box"> 
+     <div> 
+      <h2>For Rent</h2> 
+      <img src="https://i.ibb.co/kSjGMQz/orca-image-232811880.jpg" class="rent-img"> 
+      <p>Owner: <a href="">Nash Ikagami</a></p> 
+      <p>Post link: <a href="">samplelink</a></p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div> 
+    <div class="box"> 
+     <div> 
+      <h2>For Rent</h2> 
+      <img src="https://i.ibb.co/kSjGMQz/orca-image-232811880.jpg" class="rent-img"> 
+      <p>Owner: <a href="">Nash Ikagami</a></p> 
+      <p>Post link: <a href="">samplelink</a></p> <span><i class="bx bx-info-circle"></i></span> 
+     </div> 
+    </div>
+    </div>
+    <div>
+    <a href="#rent" class="btn">Click for instructions</a> 
+    <a href="#donate" class="btn">Donate here</a> 
+    </div>
+  </section> <!--footer---> 
+  <section id="contact"> 
+   <div class="footer"> 
+    <div class="main"> 
+     <div class="col"> 
+      <h4>Navigation Links</h4> 
+      <ul> 
+       <li><a href="#home">Home</a></li> 
+       <li><a href="#about">About</a></li> 
+       <li><a href="#accounts">Accounts</a></li> 
+       <li><a href="#acc">Rent</a></li> 
+       <li><a href="#contact">Contact</a></li> 
+      </ul> 
+     </div> 
+     <div class="col"> 
+      <h4>Partners</h4> 
+      <ul> 
+       <li><a href="https://www.facebook.com/Izumi.x0">Izumi Xyruz</a></li> 
+       <li><a href="#">???</a></li> 
+       <li><a href="#">???</a></li> 
+       <li><a href="#">???</a></li> 
+       <li><a href="#">???</a></li> 
+      </ul> 
+     </div> 
+     <div class="col"> 
+      <h4>Informations</h4> 
+      <ul> 
+       <li><a href="https://www.facebook.com/profile.php?id=100086564126954">Developer</a></li> 
+       <li><a href="https://www.facebook.com/profile.php?id=100086564126954">Designer</a></li> 
+       <li><a href="https://www.facebook.com/profile.php?id=100086564126954">Publisher</a></li> 
+       <li><a href="https://www.facebook.com/profile.php?id=100086564126954">Coder</a></li> 
+      </ul> 
+     </div> 
+     <div class="col"> 
+      <h4>Contact us</h4> 
+      <div class="social"> <a href="https://www.facebook.com/profile.php?id=100086564126954"><i class="bx bxl-facebook"></i></a>
+      <a href="https://www.instagram.com"><i class="bx bxl-instagram"></i></a>
+      <a href="https://www.twitter.com"><i class="bx bxl-twitter"></i></a>
+      <a href="https://www.youtube.com"><i class="bx bxl-youtube"></i></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+ 
+<script type="text/javascript" id="dcoder_script">let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+
+
+menu.addEventListener("click", function () {
+  navbar.classList.toggle("active");
+});
+
+window.onscroll = () => {
+  navbar.classList.remove("active");
+};</script></body></html>
